@@ -4,13 +4,13 @@ export default function ProjectCard({ project }: { project: Project }) {
   const inProgress = project.status === "in-progress";
 
   return (
-    <article className="flex flex-col rounded-xl border border-border p-6 transition-colors hover:border-foreground/30">
+    <article className="flex flex-col rounded-xl border border-border p-6 transition-colors hover:border-muted">
       <div className="flex items-start justify-between gap-3">
         <h2 className="text-lg font-semibold tracking-tight">
           {project.title}
         </h2>
         {inProgress ? (
-          <span className="shrink-0 rounded-full border border-accent/40 px-2.5 py-0.5 text-xs font-medium text-accent">
+          <span className="shrink-0 rounded-full border border-accent px-2.5 py-0.5 text-xs font-medium text-accent">
             In Progress
           </span>
         ) : null}
